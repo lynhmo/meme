@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Momo
 {
-    public partial class home : UserControl
+    public partial class dautu : UserControl
     {
-        public home()
+        public dautu()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

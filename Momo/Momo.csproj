@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dautu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="dautu.Designer.cs">
+      <DependentUpon>dautu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     <Compile Include="uudai.Designer.cs">
       <DependentUpon>uudai.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="dautu.resx">
+      <DependentUpon>dautu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,6 +167,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exchange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scan32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exchange32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallet32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scan32bold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\qr-code.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoutcolor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money-back-guarantee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money-back-guarantee000.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

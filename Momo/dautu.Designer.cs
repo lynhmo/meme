@@ -1,6 +1,6 @@
 ﻿namespace Momo
 {
-    partial class mywallet
+    partial class dautu
     {
         /// <summary> 
         /// Required designer variable.
@@ -34,20 +34,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label1.Location = new System.Drawing.Point(12, 13);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(4, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 25);
+            this.label1.Size = new System.Drawing.Size(86, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Vi cua toi";
+            this.label1.Text = "DAU TU";
             // 
-            // mywallet
+            // dautu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(231)))));
             this.Controls.Add(this.label1);
-            this.Name = "mywallet";
+            this.Name = "dautu";
             this.Size = new System.Drawing.Size(841, 559);
             this.ResumeLayout(false);
             this.PerformLayout();
