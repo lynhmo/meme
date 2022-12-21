@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Momo
 {
@@ -19,50 +20,94 @@ namespace Momo
         public Form1()
         {
             InitializeComponent();
-            //sidepanel.Height = btnHome.Height;
-            //sidepanel.Top = btnHome.Top;
-            //home.BringToFront();
-            home1.Visible = false;
+            //home1.Visible = false;
             left_panel.Visible = false;
+
         }
+        //Khởi tạo các panel
+        private uudai uudai1 = new uudai();
+        private lichsu lichsu1 = new lichsu();
+        private mywallet mywallet1 = new mywallet();
+        private nguontien nguontien1 = new nguontien();
+        private dautu dautu1 = new dautu();
+        private home home1 = new home();
         private void btnHome_Click(object sender, EventArgs e)
         {
+            //HOME
+            home1.Dispose();
+            home1 = new home();
+            home1.username_get = lbl_username.Text; // lay data username sang panel home
             sidepanel.Height = btnHome.Height;
+            home1.Location = new Point(200, 22);
+            home1.Size = new Size(841, 559);
+            this.Controls.Add(home1);
             sidepanel.Top = btnHome.Top;
             home1.Visible = true;
+            home1.BringToFront();
         }
-
+        
         private void btnWallet_Click(object sender, EventArgs e)
         {
+            //UU DAI
             sidepanel.Height = btnWallet.Height;
             sidepanel.Top = btnWallet.Top;
-            //uudai.BringToFront();
-        }
-
-        private void home_Load(object sender, EventArgs e)
-        {
-
+            uudai1.Location = new Point(200, 22);
+            uudai1.Size = new Size(841, 559);
+            this.Controls.Add(uudai1);
+            uudai1.Visible = true;
+            uudai1.BringToFront();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            //LICH SU GIAO DICH
+            lichsu1.Dispose();
+            lichsu1 = new lichsu();
+            lichsu1.username_get_lichsu = lbl_username.Text; // get username
             sidepanel.Height = btnGiaodich.Height;
             sidepanel.Top = btnGiaodich.Top;
-            //lichsu1.BringToFront();
+            lichsu1.Location = new Point(200, 22);
+            lichsu1.Size = new Size(841, 559);
+            this.Controls.Add(lichsu1);
+            lichsu1.Visible = true;
+            lichsu1.BringToFront();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
+            //NGUON TIEN
             sidepanel.Height = btn_money.Height;
             sidepanel.Top = btn_money.Top;
-            //nguontien1.BringToFront();
+            nguontien1.Location = new Point(200, 22);
+            nguontien1.Size = new Size(841, 559);
+            this.Controls.Add(nguontien1);
+            nguontien1.Visible = true;
+            nguontien1.BringToFront();
         }
-
         private void button5_Click(object sender, EventArgs e)
         {
+            //MY WALLET
+            mywallet1.Dispose();
+            mywallet1 = new mywallet();
+            mywallet1.setusername = lbl_username.Text;// construct lay ten
             sidepanel.Height = btnVicuatoi.Height;
             sidepanel.Top = btnVicuatoi.Top;
-            //mywallet1.BringToFront();
+            mywallet1.Location = new Point(200, 22);
+            mywallet1.Size = new Size(841,559);
+            this.Controls.Add(mywallet1);
+            mywallet1.Visible = true;
+            mywallet1.BringToFront();
+        }
+        private void btn_dautu_click(object sender, EventArgs e)
+        {
+            //DAU TU
+            sidepanel.Height = btn_dautu.Height;
+            sidepanel.Top = btn_dautu.Top;
+            dautu1.Location = new Point(200, 22);
+            dautu1.Size = new Size(841, 599);
+            this.Controls.Add(dautu1);
+            dautu1.Visible = true;
+            dautu1.BringToFront();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -99,23 +144,25 @@ namespace Momo
 
         private void btn_logout_Click(object sender, EventArgs e)
         {
-            home1.Visible = false;
+            //home1.Visible = false;
+            home1.Dispose();
             left_panel.Visible = false;
+            uudai1.Visible= false;
+            //lichsu1.Visible= false;
+            lichsu1.Dispose();
+            nguontien1.Visible= false;
+            dautu1.Visible= false;
+            //mywallet1.Visible = false;
+            mywallet1.Dispose();
         }
 
-        private void btn_dautu_click(object sender, EventArgs e)
-        {
-            sidepanel.Height = btn_dautu.Height;
-            sidepanel.Top = btn_dautu.Top;
-            //dautu1.BringToFront();
-        }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string connectionString = "Data Source=(local); Initial Catalog = momo; Integrated Security=SSPI;";
             SqlConnection cnn = new SqlConnection(connectionString);
             string pass = txtPassword.Text;
-            string name = txtUsername.Text;
+            string name = txtUsername.Text.Trim().ToLower();
             if (String.IsNullOrEmpty(name) || String.IsNullOrEmpty(pass))
             {
                 MessageBox.Show("Nhập đầy đủ username va pass!");
@@ -128,14 +175,17 @@ namespace Momo
                 int sl = (int)cmd.ExecuteScalar();
                 if (sl == 1)
                 {
+                    lbl_username.Text = name;
                     txtPassword.Text = null;
                     txtUsername.Text = null;
                     left_panel.Visible = true;
+                    btnHome_Click(sender, e);
                 }
                 else
                 {
                     MessageBox.Show("Sai mật khẩu hoặc tài khoản!!!", "Validate Error");
                 }
+                cnn.Close();
             }
         }
 
@@ -155,7 +205,6 @@ namespace Momo
                 btnLogin_Click(sender, e);
                 e.SuppressKeyPress = true;
                 this.ActiveControl = null;
-                btnHome_Click(sender, e);
             }
         }
     }

@@ -103,6 +103,13 @@
     <Compile Include="register.Designer.cs">
       <DependentUpon>register.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\chuyentien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\chuyentien.Designer.cs">
+      <DependentUpon>chuyentien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user.cs" />
     <Compile Include="uudai.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -145,6 +152,9 @@
     </Compile>
     <EmbeddedResource Include="register.resx">
       <DependentUpon>register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\chuyentien.resx">
+      <DependentUpon>chuyentien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uudai.resx">
       <DependentUpon>uudai.cs</DependentUpon>
@@ -206,6 +216,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\money-back-guarantee000.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left-arrow.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -30,9 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.left_panel = new System.Windows.Forms.Panel();
-            this.btn_logout = new System.Windows.Forms.Button();
             this.lbl_username = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.sidepanel = new System.Windows.Forms.Panel();
             this.btn_dautu = new System.Windows.Forms.Button();
             this.btnVicuatoi = new System.Windows.Forms.Button();
@@ -40,7 +38,6 @@
             this.btnGiaodich = new System.Windows.Forms.Button();
             this.btnWallet = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_minimize = new System.Windows.Forms.Button();
             this.btn_close = new System.Windows.Forms.Button();
@@ -50,12 +47,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.btn_logout = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.home1 = new Momo.home();
+            //this.home1 = new Momo.home();
             this.left_panel.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,53 +75,31 @@
             this.left_panel.Controls.Add(this.pictureBox1);
             this.left_panel.Dock = System.Windows.Forms.DockStyle.Left;
             this.left_panel.Location = new System.Drawing.Point(0, 0);
+            this.left_panel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.left_panel.Name = "left_panel";
-            this.left_panel.Size = new System.Drawing.Size(200, 581);
+            this.left_panel.Size = new System.Drawing.Size(267, 715);
             this.left_panel.TabIndex = 0;
             this.left_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // btn_logout
-            // 
-            this.btn_logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(3)))), ((int)(((byte)(57)))));
-            this.btn_logout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_logout.FlatAppearance.BorderSize = 0;
-            this.btn_logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_logout.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btn_logout.Image = global::Momo.Properties.Resources.logout2;
-            this.btn_logout.Location = new System.Drawing.Point(156, 526);
-            this.btn_logout.Name = "btn_logout";
-            this.btn_logout.Size = new System.Drawing.Size(38, 43);
-            this.btn_logout.TabIndex = 5;
-            this.btn_logout.UseVisualStyleBackColor = false;
-            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
             // 
             // lbl_username
             // 
             this.lbl_username.AutoSize = true;
             this.lbl_username.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_username.ForeColor = System.Drawing.Color.White;
-            this.lbl_username.Location = new System.Drawing.Point(85, 534);
+            this.lbl_username.Location = new System.Drawing.Point(113, 657);
+            this.lbl_username.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_username.Name = "lbl_username";
-            this.lbl_username.Size = new System.Drawing.Size(42, 21);
+            this.lbl_username.Size = new System.Drawing.Size(51, 28);
             this.lbl_username.TabIndex = 4;
             this.lbl_username.Text = "User";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Momo.Properties.Resources.user;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 512);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(58, 57);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
             // 
             // sidepanel
             // 
             this.sidepanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(45)))), ((int)(((byte)(139)))));
-            this.sidepanel.Location = new System.Drawing.Point(0, 133);
+            this.sidepanel.Location = new System.Drawing.Point(0, 164);
+            this.sidepanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sidepanel.Name = "sidepanel";
-            this.sidepanel.Size = new System.Drawing.Size(12, 54);
+            this.sidepanel.Size = new System.Drawing.Size(16, 66);
             this.sidepanel.TabIndex = 2;
             // 
             // btn_dautu
@@ -130,9 +108,10 @@
             this.btn_dautu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_dautu.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.btn_dautu.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_dautu.Location = new System.Drawing.Point(12, 441);
+            this.btn_dautu.Location = new System.Drawing.Point(16, 543);
+            this.btn_dautu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_dautu.Name = "btn_dautu";
-            this.btn_dautu.Size = new System.Drawing.Size(188, 54);
+            this.btn_dautu.Size = new System.Drawing.Size(251, 66);
             this.btn_dautu.TabIndex = 1;
             this.btn_dautu.Text = "ĐẦU TƯ";
             this.btn_dautu.UseVisualStyleBackColor = true;
@@ -144,9 +123,10 @@
             this.btnVicuatoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVicuatoi.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.btnVicuatoi.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnVicuatoi.Location = new System.Drawing.Point(12, 381);
+            this.btnVicuatoi.Location = new System.Drawing.Point(16, 469);
+            this.btnVicuatoi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnVicuatoi.Name = "btnVicuatoi";
-            this.btnVicuatoi.Size = new System.Drawing.Size(188, 54);
+            this.btnVicuatoi.Size = new System.Drawing.Size(251, 66);
             this.btnVicuatoi.TabIndex = 1;
             this.btnVicuatoi.Text = "VÍ CỦA TÔI";
             this.btnVicuatoi.UseVisualStyleBackColor = true;
@@ -158,9 +138,10 @@
             this.btn_money.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_money.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.btn_money.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_money.Location = new System.Drawing.Point(12, 319);
+            this.btn_money.Location = new System.Drawing.Point(16, 393);
+            this.btn_money.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_money.Name = "btn_money";
-            this.btn_money.Size = new System.Drawing.Size(188, 54);
+            this.btn_money.Size = new System.Drawing.Size(251, 66);
             this.btn_money.TabIndex = 1;
             this.btn_money.Text = "NGUỒN TIỀN";
             this.btn_money.UseVisualStyleBackColor = true;
@@ -172,9 +153,10 @@
             this.btnGiaodich.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGiaodich.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.btnGiaodich.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnGiaodich.Location = new System.Drawing.Point(12, 257);
+            this.btnGiaodich.Location = new System.Drawing.Point(16, 316);
+            this.btnGiaodich.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGiaodich.Name = "btnGiaodich";
-            this.btnGiaodich.Size = new System.Drawing.Size(188, 54);
+            this.btnGiaodich.Size = new System.Drawing.Size(251, 66);
             this.btnGiaodich.TabIndex = 1;
             this.btnGiaodich.Text = "LỊCH SỬ GIAO DỊCH";
             this.btnGiaodich.UseVisualStyleBackColor = true;
@@ -186,9 +168,10 @@
             this.btnWallet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnWallet.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnWallet.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnWallet.Location = new System.Drawing.Point(12, 195);
+            this.btnWallet.Location = new System.Drawing.Point(16, 240);
+            this.btnWallet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnWallet.Name = "btnWallet";
-            this.btnWallet.Size = new System.Drawing.Size(188, 54);
+            this.btnWallet.Size = new System.Drawing.Size(251, 66);
             this.btnWallet.TabIndex = 1;
             this.btnWallet.Text = "ƯU ĐÃI";
             this.btnWallet.UseVisualStyleBackColor = true;
@@ -200,23 +183,14 @@
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnHome.Location = new System.Drawing.Point(12, 133);
+            this.btnHome.Location = new System.Drawing.Point(16, 164);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(188, 54);
+            this.btnHome.Size = new System.Drawing.Size(251, 66);
             this.btnHome.TabIndex = 1;
             this.btnHome.Text = "HOME";
             this.btnHome.UseVisualStyleBackColor = true;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(54, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(85, 95);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -224,9 +198,10 @@
             this.panel2.Controls.Add(this.btn_minimize);
             this.panel2.Controls.Add(this.btn_close);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(200, 0);
+            this.panel2.Location = new System.Drawing.Point(267, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(841, 22);
+            this.panel2.Size = new System.Drawing.Size(1121, 27);
             this.panel2.TabIndex = 1;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
@@ -238,9 +213,10 @@
             this.btn_minimize.FlatAppearance.BorderSize = 0;
             this.btn_minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_minimize.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.btn_minimize.Location = new System.Drawing.Point(725, 0);
+            this.btn_minimize.Location = new System.Drawing.Point(967, 0);
+            this.btn_minimize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_minimize.Name = "btn_minimize";
-            this.btn_minimize.Size = new System.Drawing.Size(58, 22);
+            this.btn_minimize.Size = new System.Drawing.Size(77, 27);
             this.btn_minimize.TabIndex = 0;
             this.btn_minimize.Text = "_";
             this.btn_minimize.UseVisualStyleBackColor = true;
@@ -251,9 +227,10 @@
             this.btn_close.FlatAppearance.BorderSize = 0;
             this.btn_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_close.Font = new System.Drawing.Font("Sans Serif Collection", 5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_close.Location = new System.Drawing.Point(783, 0);
+            this.btn_close.Location = new System.Drawing.Point(1044, 0);
+            this.btn_close.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(58, 22);
+            this.btn_close.Size = new System.Drawing.Size(77, 27);
             this.btn_close.TabIndex = 0;
             this.btn_close.Text = "X";
             this.btn_close.UseVisualStyleBackColor = true;
@@ -262,9 +239,10 @@
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 18F);
-            this.txtPassword.Location = new System.Drawing.Point(638, 267);
+            this.txtPassword.Location = new System.Drawing.Point(851, 329);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(284, 39);
+            this.txtPassword.Size = new System.Drawing.Size(377, 47);
             this.txtPassword.TabIndex = 28;
             this.txtPassword.UseSystemPasswordChar = true;
             this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
@@ -273,18 +251,20 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 18F);
-            this.label2.Location = new System.Drawing.Point(415, 270);
+            this.label2.Location = new System.Drawing.Point(553, 332);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 32);
+            this.label2.Size = new System.Drawing.Size(143, 41);
             this.label2.TabIndex = 31;
             this.label2.Text = "Password";
             // 
             // txtUsername
             // 
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 18F);
-            this.txtUsername.Location = new System.Drawing.Point(638, 214);
+            this.txtUsername.Location = new System.Drawing.Point(851, 263);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(284, 39);
+            this.txtUsername.Size = new System.Drawing.Size(377, 47);
             this.txtUsername.TabIndex = 27;
             this.txtUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUsername_KeyDown);
             // 
@@ -292,18 +272,20 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F);
-            this.label1.Location = new System.Drawing.Point(415, 217);
+            this.label1.Location = new System.Drawing.Point(553, 267);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 32);
+            this.label1.Size = new System.Drawing.Size(152, 41);
             this.label1.TabIndex = 32;
             this.label1.Text = "Username";
             // 
             // btnRegister
             // 
             this.btnRegister.Font = new System.Drawing.Font("Segoe UI", 18F);
-            this.btnRegister.Location = new System.Drawing.Point(658, 330);
+            this.btnRegister.Location = new System.Drawing.Point(877, 406);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(129, 42);
+            this.btnRegister.Size = new System.Drawing.Size(172, 52);
             this.btnRegister.TabIndex = 30;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = true;
@@ -311,38 +293,79 @@
             // btnLogin
             // 
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 18F);
-            this.btnLogin.Location = new System.Drawing.Point(793, 330);
+            this.btnLogin.Location = new System.Drawing.Point(1057, 406);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(129, 42);
+            this.btnLogin.Size = new System.Drawing.Size(172, 52);
             this.btnLogin.TabIndex = 29;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
+            // btn_logout
+            // 
+            this.btn_logout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(3)))), ((int)(((byte)(57)))));
+            this.btn_logout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_logout.FlatAppearance.BorderSize = 0;
+            this.btn_logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_logout.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btn_logout.Image = global::Momo.Properties.Resources.logout2;
+            this.btn_logout.Location = new System.Drawing.Point(208, 647);
+            this.btn_logout.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_logout.Name = "btn_logout";
+            this.btn_logout.Size = new System.Drawing.Size(51, 53);
+            this.btn_logout.TabIndex = 5;
+            this.btn_logout.UseVisualStyleBackColor = false;
+            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Momo.Properties.Resources.user;
+            this.pictureBox2.Location = new System.Drawing.Point(16, 630);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(77, 70);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(71, 13);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(113, 117);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(120, 175);
+            this.pictureBox3.Location = new System.Drawing.Point(160, 215);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(223, 200);
+            this.pictureBox3.Size = new System.Drawing.Size(297, 246);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 6;
             this.pictureBox3.TabStop = false;
             // 
             // home1
             // 
-            this.home1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(231)))));
-            this.home1.Location = new System.Drawing.Point(200, 22);
-            this.home1.Name = "home1";
-            this.home1.Size = new System.Drawing.Size(841, 559);
-            this.home1.TabIndex = 33;
+            //this.home1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(231)))));
+            //this.home1.Location = new System.Drawing.Point(267, 27);
+            //this.home1.Margin = new System.Windows.Forms.Padding(5);
+            //this.home1.Name = "home1";
+            //this.home1.Size = new System.Drawing.Size(1121, 688);
+            //this.home1.TabIndex = 33;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1041, 581);
-            this.Controls.Add(this.home1);
+            this.ClientSize = new System.Drawing.Size(1388, 715);
+            //this.Controls.Add(this.home1);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtUsername);
@@ -354,15 +377,16 @@
             this.Controls.Add(this.pictureBox3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Momo";
             this.left_panel.ResumeLayout(false);
             this.left_panel.PerformLayout();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -393,7 +417,7 @@
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private home home1;
+        //private home home1;
     }
 }
 
