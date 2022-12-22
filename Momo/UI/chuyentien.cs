@@ -65,7 +65,7 @@ namespace Momo.UI
             int transferMoney = Convert.ToInt32(txt_money_transfer.Text); // TIEN GUI
             int finalMoneyTrans = cur_money - transferMoney;//TIEN CHECK 
             int FinalMoneyReceive = transferMoney + money_receive;//tien nhan
-            string dateTransfer = string.Format(DateTime.Now.ToString("yyyy-MM-dd"));
+            string dateTransfer = string.Format(DateTime.Now.ToString("yyyy-MM-dd h:mm:ss"));
             if (finalMoneyTrans >= 0) // neu tien gui it hon tien hien co bao không du so du
             {
                 //update money cua nguoi chuyen
@@ -79,11 +79,12 @@ namespace Momo.UI
                 updateNguoiNhan.Parameters.AddWithValue("@id_gui", id_user_reveice);
                 updateNguoiNhan.ExecuteNonQuery();
                 //insert
-                SqlCommand insertLichSu = new SqlCommand("INSERT INTO lichsu (id_user,id_user_revice,total_money,ngaygiaodich) VALUES (@id_gui,@id_nhan,@totalMoney,@date)", cnn);
+                SqlCommand insertLichSu = new SqlCommand("INSERT INTO lichsu (id_user,id_user_revice,total_money,ngaygiaodich,thongdiep) VALUES (@id_gui,@id_nhan,@totalMoney,@date,@thongdiep)", cnn);
                 insertLichSu.Parameters.AddWithValue("@id_gui", id_user);
                 insertLichSu.Parameters.AddWithValue("@id_nhan", id_user_reveice);
                 insertLichSu.Parameters.AddWithValue("@totalMoney", transferMoney);
                 insertLichSu.Parameters.AddWithValue("@date", dateTransfer);
+                insertLichSu.Parameters.AddWithValue("@thongdiep", txtMessage.Text);
                 insertLichSu.ExecuteNonQuery();
                 cnn.Close();
                 //refresh

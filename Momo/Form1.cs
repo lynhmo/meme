@@ -22,7 +22,7 @@ namespace Momo
             InitializeComponent();
             //home1.Visible = false;
             left_panel.Visible = false;
-
+            register2.Visible = false;
         }
         //Khởi tạo các panel
         private uudai uudai1 = new uudai();
@@ -206,6 +206,11 @@ namespace Momo
                 e.SuppressKeyPress = true;
                 this.ActiveControl = null;
             }
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            register2.Visible= true;
         }
     }
 }

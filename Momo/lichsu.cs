@@ -39,7 +39,7 @@ namespace Momo
                     manguoidung = Convert.ToInt32(String.Format("{0}", reader["id"])); //id nguoi gui
                 }
             }
-            string query = $"SELECT * FROM lichsu WHERE id_user={manguoidung}";
+            string query = $"SELECT * FROM lichsu WHERE id_user={manguoidung} OR id_user_revice={manguoidung}";
             SqlDataAdapter da = new SqlDataAdapter(query, cnn);
             DataTable dtbl = new DataTable();
             da.Fill(dtbl);

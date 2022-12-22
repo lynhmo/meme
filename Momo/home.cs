@@ -10,6 +10,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Momo
 {
@@ -18,7 +19,7 @@ namespace Momo
         public home()
         {
             InitializeComponent();
-            
+
         }
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
 
@@ -36,9 +37,33 @@ namespace Momo
         private int manguoidung;
         private chuyentien chuyentien1;
         public string username_get { get; set; }
+        private string cur_mon = "0";
+        private void curent_money()
+        {
+            try
+            {
+                SqlCommand crruent_money = new SqlCommand("Select * from users WHERE username=@username1", cnn);
+                crruent_money.Parameters.AddWithValue("@username1", username_get);
+                //open conn
+                cnn.Open();
+                using (SqlDataReader reader = crruent_money.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        cur_mon = String.Format("{0}", reader["money"]); // tien hien tai
+                    }
+                }
+                cnn.Close();
+                lbl_user_money.Text = cur_mon +" VND";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
             chuyentien1 = new chuyentien();
             chuyentien1.chuyentien_username = username_get; // chuyen username sang chuyen tien
             chuyentien1.Location = new Point(0, 0);
@@ -54,15 +79,23 @@ namespace Momo
             panel2.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel2.Width, panel2.Height, 20, 20));
             panel3.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel3.Width, panel3.Height, 20, 20));
             panel4.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel4.Width, panel4.Height, 20, 20));
+            panel5.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel4.Width, panel4.Height, 20, 20));
+            panel3232.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel4.Width, panel4.Height, 20, 20));
+            panel6.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel4.Width, panel4.Height, 20, 20));
+            panel8.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel4.Width, panel4.Height, 20, 20));
         }
         private string money1 = "";
-        private string manguoinhan1= "";
+        private string id1 = "";
+        private string manguoinhan1 = "";
+        private string id2 = "";
         private string money2 = "";
-        private string manguoinhan2= "";
+        private string manguoinhan2 = "";
+        private string id3 = "";
         private string money3 = "";
-        private string manguoinhan3= "";
+        private string manguoinhan3 = "";
+        private string id4 = "";
         private string money4 = "";
-        private string manguoinhan4= "";
+        private string manguoinhan4 = "";
 
         private void panel1Load()
         {
@@ -88,11 +121,12 @@ namespace Momo
                 if (reader.Read())
                 {
                     money1 = String.Format("{0}", reader["total_money"]);
+                    id1 = String.Format("{0}", reader["id_user_revice"]);
                 }
             }
             //GET USER NAME
             SqlCommand top2 = new SqlCommand("SELECT username FROM users WHERE id=@iduser", cnn); // thay thu tu cac record
-            top2.Parameters.AddWithValue("@iduser", manguoidung);
+            top2.Parameters.AddWithValue("@iduser", id1);
             using (SqlDataReader reader = top2.ExecuteReader()) //nguoi chuyen
             {
                 if (reader.Read())
@@ -128,13 +162,13 @@ namespace Momo
             {
                 if (reader.Read())
                 {
-                    manguoinhan2 = String.Format("{0}", reader["id_user_revice"]);
+                    id2 = String.Format("{0}", reader["id_user_revice"]);
                     money2 = String.Format("{0}", reader["total_money"]);
                 }
             }
             //GET USER NAME
             SqlCommand top2 = new SqlCommand("SELECT username FROM users WHERE id=@iduser", cnn); // thay thu tu cac record
-            top2.Parameters.AddWithValue("@iduser", manguoidung);
+            top2.Parameters.AddWithValue("@iduser", id2);
             using (SqlDataReader reader = top2.ExecuteReader()) //nguoi chuyen
             {
                 if (reader.Read())
@@ -170,13 +204,13 @@ namespace Momo
             {
                 if (reader.Read())
                 {
-                    manguoinhan3 = String.Format("{0}", reader["id_user_revice"]);
+                    id3 = String.Format("{0}", reader["id_user_revice"]);
                     money3 = String.Format("{0}", reader["total_money"]);
                 }
             }
             //GET USER NAME
             SqlCommand top2 = new SqlCommand("SELECT username FROM users WHERE id=@iduser", cnn); // thay thu tu cac record
-            top2.Parameters.AddWithValue("@iduser", manguoidung);
+            top2.Parameters.AddWithValue("@iduser", id3);
             using (SqlDataReader reader = top2.ExecuteReader()) //nguoi chuyen
             {
                 if (reader.Read())
@@ -212,13 +246,13 @@ namespace Momo
             {
                 if (reader.Read())
                 {
-                    manguoinhan4 = String.Format("{0}", reader["id_user_revice"]);
+                    id4 = String.Format("{0}", reader["id_user_revice"]);
                     money4 = String.Format("{0}", reader["total_money"]);
                 }
             }
             //GET USER NAME
             SqlCommand top2 = new SqlCommand("SELECT username FROM users WHERE id=@iduser", cnn); // thay thu tu cac record
-            top2.Parameters.AddWithValue("@iduser", manguoidung);
+            top2.Parameters.AddWithValue("@iduser", id4);
             using (SqlDataReader reader = top2.ExecuteReader()) //nguoi chuyen
             {
                 if (reader.Read())
@@ -231,13 +265,197 @@ namespace Momo
             lbl_name_lichsu4.Text = manguoinhan4;
             cnn.Close();
         }
-
+        private string money11 = "";
+        private string id11 = "";
+        private string manguoinhan11 = "";
+        private string money22 = "";
+        private string id22 = "";
+        private string manguoinhan22 = "";
+        private string money33 = "";
+        private string id33 = "";
+        private string manguoinhan33 = "";
+        private string money44 = "";
+        private string id44 = "";
+        private string manguoinhan44 = "";
+        private void panelNhan1load()
+        {
+            cnn.Open();
+            SqlCommand idNguoigui = new SqlCommand("Select id from users WHERE username=@username", cnn);
+            idNguoigui.Parameters.AddWithValue("@username", username_get);
+            using (SqlDataReader reader = idNguoigui.ExecuteReader()) //nguoi chuyen
+            {
+                if (reader.Read())
+                {
+                    manguoidung = Convert.ToInt32(String.Format("{0}", reader["id"])); //id nguoi gui
+                }
+            }
+            SqlCommand top1 = new SqlCommand("SELECT * " +
+                                            "FROM (SELECT t.*, ROW_NUMBER() OVER(ORDER BY ngaygiaodich DESC) AS RowNumber" +
+                                                    " FROM lichsu t" +
+                                                    " WHERE id_user_revice = @iduser" +
+                                                    " )AS tmp" +
+                                            " WHERE RowNumber = 1", cnn);
+            top1.Parameters.AddWithValue("@iduser", manguoidung);
+            using (SqlDataReader reader = top1.ExecuteReader()) //nguoi chuyen
+            {
+                if (reader.Read())
+                {
+                    id11 = String.Format("{0}", reader["id_user"]);
+                    money11 = String.Format("{0}", reader["total_money"]);
+                }
+            }
+            //GET USER NAME
+            SqlCommand top2 = new SqlCommand("SELECT username FROM users WHERE id=@iduser", cnn); // thay thu tu cac record
+            top2.Parameters.AddWithValue("@iduser", id11);
+            using (SqlDataReader reader = top2.ExecuteReader()) //nguoi chuyen
+            {
+                if (reader.Read())
+                {
+                    manguoinhan11 = String.Format("{0}", reader["username"]);
+                }
+            }
+            //
+            lbl_money_nhan1.Text = money11 + "VND";
+            lbl_name1.Text = manguoinhan11;
+            cnn.Close();
+        }
+        private void panelNhan2load()
+        {
+            cnn.Open();
+            SqlCommand idNguoigui = new SqlCommand("Select id from users WHERE username=@username", cnn);
+            idNguoigui.Parameters.AddWithValue("@username", username_get);
+            using (SqlDataReader reader = idNguoigui.ExecuteReader()) //nguoi chuyen
+            {
+                if (reader.Read())
+                {
+                    manguoidung = Convert.ToInt32(String.Format("{0}", reader["id"])); //id nguoi gui
+                }
+            }
+            SqlCommand top1 = new SqlCommand("SELECT * " +
+                                            "FROM (SELECT t.*, ROW_NUMBER() OVER(ORDER BY ngaygiaodich DESC) AS RowNumber" +
+                                                    " FROM lichsu t" +
+                                                    " WHERE id_user_revice = @iduser" +
+                                                    " )AS tmp" +
+                                            " WHERE RowNumber = 2", cnn);
+            top1.Parameters.AddWithValue("@iduser", manguoidung);
+            using (SqlDataReader reader = top1.ExecuteReader()) //nguoi chuyen
+            {
+                if (reader.Read())
+                {
+                    id22 = String.Format("{0}", reader["id_user"]);
+                    money22 = String.Format("{0}", reader["total_money"]);
+                }
+            }
+            //GET USER NAME
+            SqlCommand top2 = new SqlCommand("SELECT username FROM users WHERE id=@iduser", cnn); // thay thu tu cac record
+            top2.Parameters.AddWithValue("@iduser", id22);
+            using (SqlDataReader reader = top2.ExecuteReader()) //nguoi chuyen
+            {
+                if (reader.Read())
+                {
+                    manguoinhan22 = String.Format("{0}", reader["username"]);
+                }
+            }
+            //
+            lbl_money_nhan2.Text = money22 + "VND";
+            lbl_name2.Text = manguoinhan22;
+            cnn.Close();
+        }
+        private void panelNhan3load()
+        {
+            cnn.Open();
+            SqlCommand idNguoigui = new SqlCommand("Select id from users WHERE username=@username", cnn);
+            idNguoigui.Parameters.AddWithValue("@username", username_get);
+            using (SqlDataReader reader = idNguoigui.ExecuteReader()) //nguoi chuyen
+            {
+                if (reader.Read())
+                {
+                    manguoidung = Convert.ToInt32(String.Format("{0}", reader["id"])); //id nguoi gui
+                }
+            }
+            SqlCommand top1 = new SqlCommand("SELECT * " +
+                                            "FROM (SELECT t.*, ROW_NUMBER() OVER(ORDER BY ngaygiaodich DESC) AS RowNumber" +
+                                                    " FROM lichsu t" +
+                                                    " WHERE id_user_revice = @iduser" +
+                                                    " )AS tmp" +
+                                            " WHERE RowNumber = 3", cnn);
+            top1.Parameters.AddWithValue("@iduser", manguoidung);
+            using (SqlDataReader reader = top1.ExecuteReader()) //nguoi chuyen
+            {
+                if (reader.Read())
+                {
+                    id33 = String.Format("{0}", reader["id_user"]);
+                    money33 = String.Format("{0}", reader["total_money"]);
+                }
+            }
+            //GET USER NAME
+            SqlCommand top2 = new SqlCommand("SELECT username FROM users WHERE id=@iduser", cnn); // thay thu tu cac record
+            top2.Parameters.AddWithValue("@iduser", id33);
+            using (SqlDataReader reader = top2.ExecuteReader()) //nguoi chuyen
+            {
+                if (reader.Read())
+                {
+                    manguoinhan33 = String.Format("{0}", reader["username"]);
+                }
+            }
+            //
+            lbl_money_nhan3.Text = money33 + "VND";
+            lbl_name3.Text = manguoinhan33;
+            cnn.Close();
+        }
+        private void panelNhan4load()
+        {
+            cnn.Open();
+            SqlCommand idNguoigui = new SqlCommand("Select id from users WHERE username=@username", cnn);
+            idNguoigui.Parameters.AddWithValue("@username", username_get);
+            using (SqlDataReader reader = idNguoigui.ExecuteReader()) //nguoi chuyen
+            {
+                if (reader.Read())
+                {
+                    manguoidung = Convert.ToInt32(String.Format("{0}", reader["id"])); //id nguoi gui
+                }
+            }
+            SqlCommand top1 = new SqlCommand("SELECT * " +
+                                            "FROM (SELECT t.*, ROW_NUMBER() OVER(ORDER BY ngaygiaodich DESC) AS RowNumber" +
+                                                    " FROM lichsu t" +
+                                                    " WHERE id_user_revice = @iduser" +
+                                                    " )AS tmp" +
+                                            " WHERE RowNumber = 1", cnn);
+            top1.Parameters.AddWithValue("@iduser", manguoidung);
+            using (SqlDataReader reader = top1.ExecuteReader()) //nguoi chuyen
+            {
+                if (reader.Read())
+                {
+                    id44 = String.Format("{0}", reader["id_user"]);
+                    money44 = String.Format("{0}", reader["total_money"]);
+                }
+            }
+            //GET USER NAME
+            SqlCommand top2 = new SqlCommand("SELECT username FROM users WHERE id=@iduser", cnn); // thay thu tu cac record
+            top2.Parameters.AddWithValue("@iduser", id44);
+            using (SqlDataReader reader = top2.ExecuteReader()) //nguoi chuyen
+            {
+                if (reader.Read())
+                {
+                    manguoinhan44 = String.Format("{0}", reader["username"]);
+                }
+            }
+            //
+            lbl_money_nhan4.Text = money44 + "VND";
+            lbl_name4.Text = manguoinhan44;
+            cnn.Close();
+        }
         private void button3_Click(object sender, EventArgs e)
         {
             panel1Load();
             panel2Load();
             panel3Load();
             panel4Load();
+            panelNhan1load();
+            panelNhan2load();
+            panelNhan3load();
+            panelNhan4load();
+            curent_money();
         }
     }
 }
