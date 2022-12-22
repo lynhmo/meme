@@ -222,5 +222,47 @@
   <ItemGroup>
     <None Include="Resources\user1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bidv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vietcombank-Logo-PNG-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4539e8d2-c991-4745-812c-ec82f3572ee8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\636529926612396574_1507081853551atm-viettin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo_MB_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\techcombank-logo-63818C82B8-seeklogo.com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VPBank_logo.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TPBank-Logo-PNG-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Agribank-Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agribank-2014-logo-D607F59D1E-seeklogo.com.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO-VIB-Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo-Sacombank-new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo-ACB.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo-OceanBank-V.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

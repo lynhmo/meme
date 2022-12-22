@@ -52,10 +52,6 @@
             this.lbl_amount_4 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btn_naptien = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.lbl_name1 = new System.Windows.Forms.Label();
@@ -77,15 +73,19 @@
             this.lbl_money_nhan4 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btn_naptien = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -352,64 +352,11 @@
             this.label14.TabIndex = 4;
             this.label14.Text = "Gửi :";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Momo.Properties.Resources.money_back_guarantee000;
-            this.pictureBox1.Location = new System.Drawing.Point(29, 155);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 33);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
-            // 
-            // button2
-            // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Image = global::Momo.Properties.Resources.qr_code;
-            this.button2.Location = new System.Drawing.Point(723, 21);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(87, 77);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Quét Mã";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::Momo.Properties.Resources.exchange32;
-            this.button1.Location = new System.Drawing.Point(526, 21);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 77);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Chuyển Tiền";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btn_naptien
-            // 
-            this.btn_naptien.FlatAppearance.BorderSize = 0;
-            this.btn_naptien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_naptien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_naptien.Image = global::Momo.Properties.Resources.wallet32;
-            this.btn_naptien.Location = new System.Drawing.Point(630, 21);
-            this.btn_naptien.Name = "btn_naptien";
-            this.btn_naptien.Size = new System.Drawing.Size(87, 77);
-            this.btn_naptien.TabIndex = 1;
-            this.btn_naptien.Text = "Nạp Tiền";
-            this.btn_naptien.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_naptien.UseVisualStyleBackColor = true;
-            // 
             // button3
             // 
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(446, 467);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Location = new System.Drawing.Point(558, 470);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(66, 28);
             this.button3.TabIndex = 14;
@@ -424,7 +371,7 @@
             this.panel5.Controls.Add(this.lbl_money_nhan1);
             this.panel5.Controls.Add(this.label7);
             this.panel5.Controls.Add(this.label8);
-            this.panel5.Location = new System.Drawing.Point(233, 194);
+            this.panel5.Location = new System.Drawing.Point(305, 194);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(203, 75);
             this.panel5.TabIndex = 11;
@@ -480,7 +427,7 @@
             this.panel6.Controls.Add(this.lbl_money_nhan3);
             this.panel6.Controls.Add(this.label15);
             this.panel6.Controls.Add(this.label16);
-            this.panel6.Location = new System.Drawing.Point(233, 346);
+            this.panel6.Location = new System.Drawing.Point(305, 346);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(203, 74);
             this.panel6.TabIndex = 11;
@@ -536,7 +483,7 @@
             this.panel7.Controls.Add(this.lbl_money_nhan2);
             this.panel7.Controls.Add(this.label19);
             this.panel7.Controls.Add(this.label20);
-            this.panel7.Location = new System.Drawing.Point(233, 270);
+            this.panel7.Location = new System.Drawing.Point(305, 270);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(203, 75);
             this.panel7.TabIndex = 12;
@@ -592,7 +539,7 @@
             this.panel8.Controls.Add(this.lbl_money_nhan4);
             this.panel8.Controls.Add(this.label23);
             this.panel8.Controls.Add(this.label24);
-            this.panel8.Location = new System.Drawing.Point(233, 421);
+            this.panel8.Location = new System.Drawing.Point(305, 421);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(203, 74);
             this.panel8.TabIndex = 12;
@@ -641,6 +588,60 @@
             this.label24.TabIndex = 4;
             this.label24.Text = "Nhận :";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Momo.Properties.Resources.money_back_guarantee000;
+            this.pictureBox1.Location = new System.Drawing.Point(29, 155);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 33);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button2
+            // 
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Image = global::Momo.Properties.Resources.qr_code;
+            this.button2.Location = new System.Drawing.Point(723, 21);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(87, 77);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Quét Mã";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::Momo.Properties.Resources.exchange32;
+            this.button1.Location = new System.Drawing.Point(526, 21);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(98, 77);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Chuyển Tiền";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btn_naptien
+            // 
+            this.btn_naptien.FlatAppearance.BorderSize = 0;
+            this.btn_naptien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_naptien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_naptien.Image = global::Momo.Properties.Resources.wallet32;
+            this.btn_naptien.Location = new System.Drawing.Point(630, 21);
+            this.btn_naptien.Name = "btn_naptien";
+            this.btn_naptien.Size = new System.Drawing.Size(87, 77);
+            this.btn_naptien.TabIndex = 1;
+            this.btn_naptien.Text = "Nạp Tiền";
+            this.btn_naptien.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_naptien.UseVisualStyleBackColor = true;
+            this.btn_naptien.Click += new System.EventHandler(this.btn_naptien_Click);
+            // 
             // home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -674,7 +675,6 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -683,6 +683,7 @@
             this.panel7.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

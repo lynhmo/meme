@@ -36,7 +36,6 @@ namespace Momo
         private static string connectionString = "Data Source=(local); Initial Catalog = momo; Integrated Security=SSPI;";
         private static SqlConnection cnn = new SqlConnection(connectionString);
         private int manguoidung;
-        private chuyentien chuyentien1;
         public string username_get { get; set; }
         private string cur_mon = "0";
         private void curent_money()
@@ -63,16 +62,17 @@ namespace Momo
                 MessageBox.Show(ex.Message);
             }
         }
+        private chuyentien addmoney1;
         private void button1_Click(object sender, EventArgs e)
         {
 
-            chuyentien1 = new chuyentien();
-            chuyentien1.chuyentien_username = username_get; // chuyen username sang chuyen tien
-            chuyentien1.Location = new Point(0, 0);
-            chuyentien1.Size = new Size(841, 559);
-            this.Controls.Add(chuyentien1);
-            chuyentien1.Visible = true;
-            chuyentien1.BringToFront();
+            addmoney1 = new chuyentien();
+            addmoney1.chuyentien_username = username_get; // chuyen username sang chuyen tien
+            addmoney1.Location = new Point(0, 0);
+            addmoney1.Size = new Size(841, 559);
+            this.Controls.Add(addmoney1);
+            addmoney1.Visible = true;
+            addmoney1.BringToFront();
         }
 
         private void home_Load(object sender, EventArgs e)
@@ -458,6 +458,18 @@ namespace Momo
             panelNhan3load();
             panelNhan4load();
             curent_money();
+        }
+
+        private addmoney addmoney1;
+        private void btn_naptien_Click(object sender, EventArgs e)
+        {
+            addmoney1 = new chuyentien();
+            addmoney1.addmoney_username = username_get;
+            addmoney1.Location = new Point(0, 0);
+            addmoney1.Size = new Size(841, 559);
+            this.Controls.Add(addmoney1);
+            addmoney1.Visible = true;
+            addmoney1.BringToFront();
         }
     }
 }
