@@ -16,6 +16,7 @@ namespace Momo.UI
         public addmoney()
         {
             InitializeComponent();
+            comboboxBank_Load();
         }
         private static string connectionString = "Data Source=(local); Initial Catalog = momo; Integrated Security=SSPI;";
         private static SqlConnection cnn = new SqlConnection(connectionString);
@@ -43,6 +44,25 @@ namespace Momo.UI
         private void button1_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void addmoney_Load(object sender, EventArgs e)
+        {
+            loadTableBank();
+
+        }
+        private void comboboxBank_Load()
+        {
+            cnn.Open();
+            string cmbNhanvien = $"SELECT bankname FROM bank_user,bank WHERE id_user={id_user} AND bank.id_bank=bank_user.id_bank";
+            SqlDataAdapter cmbNhanvien_ = new SqlDataAdapter(cmbNhanvien, cnn);
+            DataSet ds1 = new DataSet();
+            cmbNhanvien_.Fill(ds1, "bankname1");
+            cbb_bankname.DisplayMember = "bankname";
+            //cbb_bankname.ValueMember = "id_bank";
+            cbb_bankname.DataSource = ds1.Tables["bankname1"];
+            cnn.Close();
+
         }
     }
 }
