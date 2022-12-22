@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -63,6 +64,42 @@ namespace Momo.UI
             cbb_bankname.DataSource = ds1.Tables["bankname1"];
             cnn.Close();
 
+        }
+        private int naptien=0;
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (naptienNumber.Value > 0)
+            {
+                currMoney();
+                naptien = Convert.ToInt32(naptienNumber.Value);
+                cnn.Open();
+                SqlCommand updateNguoiGui = new SqlCommand("UPDATE users SET money = @nap WHERE id=@id", cnn);
+                updateNguoiGui.Parameters.AddWithValue("@id", id_user);
+                updateNguoiGui.Parameters.AddWithValue("@nap", naptien+ current_Money);
+                updateNguoiGui.ExecuteNonQuery();
+                cnn.Close();
+                button1_Click(sender,e);
+                MessageBox.Show("Đã nạp "+naptien+ " VNĐ vào tài khoản!", "Thành công");
+            }
+            else
+            {
+                MessageBox.Show("Xảy ra lỗi khi thực hiện");
+            }
+        }
+        private int current_Money=0;
+        private void currMoney()
+        {
+            SqlCommand commandNV = new SqlCommand("Select money from users WHERE id=@id", cnn);
+            commandNV.Parameters.AddWithValue("@id", id_user);
+            cnn.Open();
+            using (SqlDataReader reader = commandNV.ExecuteReader())
+            {
+                if (reader.Read())
+                {
+                    current_Money = Convert.ToInt32(String.Format("{0}", reader["money"]));
+                }
+            }
+            cnn.Close();
         }
     }
 }

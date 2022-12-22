@@ -204,5 +204,13 @@ namespace Momo
             txtCurr_pass.Text = null;
             txtNewPass.Text = null;
         }
+
+        private void btn_goback(object sender, EventArgs e)
+        {
+            panel_resetPass.Visible = false;
+            txtConfirmNewPass.Text = null;
+            txtCurr_pass.Text = null;
+            txtNewPass.Text = null;
+        }
     }
 }

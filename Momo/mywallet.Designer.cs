@@ -62,6 +62,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtConfirmNewPass = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.btngoback = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tableBank)).BeginInit();
@@ -353,6 +354,7 @@
             // 
             // panel_resetPass
             // 
+            this.panel_resetPass.Controls.Add(this.btngoback);
             this.panel_resetPass.Controls.Add(this.btn_doimatkhau_done);
             this.panel_resetPass.Controls.Add(this.txtCurr_pass);
             this.panel_resetPass.Controls.Add(this.label6);
@@ -422,6 +424,19 @@
             this.label4.Size = new System.Drawing.Size(210, 28);
             this.label4.TabIndex = 4;
             this.label4.Text = "Nhập lại mật khẩu mới";
+            // 
+            // btngoback
+            // 
+            this.btngoback.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(173)))), ((int)(((byte)(210)))));
+            this.btngoback.FlatAppearance.BorderSize = 0;
+            this.btngoback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btngoback.Location = new System.Drawing.Point(171, 280);
+            this.btngoback.Name = "btngoback";
+            this.btngoback.Size = new System.Drawing.Size(127, 36);
+            this.btngoback.TabIndex = 5;
+            this.btngoback.Text = "Goback";
+            this.btngoback.UseVisualStyleBackColor = false;
+            this.btngoback.Click += new System.EventHandler(this.btn_goback);
             // 
             // mywallet
             // 
@@ -499,5 +514,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtNewPass;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btngoback;
     }
 }

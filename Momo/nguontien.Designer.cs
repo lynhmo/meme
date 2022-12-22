@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.tableBank = new System.Windows.Forms.DataGridView();
             this.id_bank = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,11 +61,15 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.panelAddBank = new System.Windows.Forms.Panel();
+            this.txtBankName = new System.Windows.Forms.TextBox();
             this.btn_add_done = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.btn_add_bank = new System.Windows.Forms.Button();
             this.btn_add_bank_close = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtBankName = new System.Windows.Forms.TextBox();
+            this.table_all_Bank = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tableBank)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -91,6 +96,7 @@
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.panelAddBank.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.table_all_Bank)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -115,19 +121,19 @@
             this.tableBank.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_bank,
             this.bankname});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(45)))), ((int)(((byte)(139)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tableBank.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(45)))), ((int)(((byte)(139)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tableBank.DefaultCellStyle = dataGridViewCellStyle1;
             this.tableBank.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(0)))), ((int)(((byte)(100)))));
-            this.tableBank.Location = new System.Drawing.Point(466, 132);
+            this.tableBank.Location = new System.Drawing.Point(354, 132);
             this.tableBank.Name = "tableBank";
             this.tableBank.RowHeadersVisible = false;
-            this.tableBank.Size = new System.Drawing.Size(342, 386);
+            this.tableBank.Size = new System.Drawing.Size(218, 386);
             this.tableBank.TabIndex = 7;
             // 
             // id_bank
@@ -176,7 +182,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(461, 91);
+            this.label3.Location = new System.Drawing.Point(349, 91);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(223, 28);
             this.label3.TabIndex = 1;
@@ -413,6 +419,14 @@
             this.panelAddBank.Size = new System.Drawing.Size(294, 386);
             this.panelAddBank.TabIndex = 9;
             // 
+            // txtBankName
+            // 
+            this.txtBankName.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBankName.Location = new System.Drawing.Point(18, 49);
+            this.txtBankName.Name = "txtBankName";
+            this.txtBankName.Size = new System.Drawing.Size(233, 25);
+            this.txtBankName.TabIndex = 11;
+            // 
             // btn_add_done
             // 
             this.btn_add_done.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(173)))), ((int)(((byte)(210)))));
@@ -426,6 +440,16 @@
             this.btn_add_done.Text = "Liên kết";
             this.btn_add_done.UseVisualStyleBackColor = false;
             this.btn_add_done.Click += new System.EventHandler(this.btn_add_done_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(14, 18);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(106, 19);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Tên ngân hàng";
             // 
             // btn_add_bank
             // 
@@ -455,23 +479,54 @@
             this.btn_add_bank_close.UseVisualStyleBackColor = false;
             this.btn_add_bank_close.Click += new System.EventHandler(this.btn_add_bank_Click_close);
             // 
-            // label4
+            // table_all_Bank
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(14, 18);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(106, 19);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Tên ngân hàng";
+            this.table_all_Bank.AllowUserToAddRows = false;
+            this.table_all_Bank.AllowUserToDeleteRows = false;
+            this.table_all_Bank.AllowUserToResizeRows = false;
+            this.table_all_Bank.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.table_all_Bank.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(173)))), ((int)(((byte)(210)))));
+            this.table_all_Bank.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.table_all_Bank.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.table_all_Bank.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(45)))), ((int)(((byte)(139)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.table_all_Bank.DefaultCellStyle = dataGridViewCellStyle2;
+            this.table_all_Bank.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(0)))), ((int)(((byte)(100)))));
+            this.table_all_Bank.Location = new System.Drawing.Point(589, 132);
+            this.table_all_Bank.Name = "table_all_Bank";
+            this.table_all_Bank.RowHeadersVisible = false;
+            this.table_all_Bank.Size = new System.Drawing.Size(218, 386);
+            this.table_all_Bank.TabIndex = 7;
             // 
-            // txtBankName
+            // dataGridViewTextBoxColumn1
             // 
-            this.txtBankName.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBankName.Location = new System.Drawing.Point(18, 49);
-            this.txtBankName.Name = "txtBankName";
-            this.txtBankName.Size = new System.Drawing.Size(233, 25);
-            this.txtBankName.TabIndex = 11;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "id_bank";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Mã ngân hàng";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "bankname";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Tên ngân hàng";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.label5.Location = new System.Drawing.Point(584, 91);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(181, 28);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Ngân hàng hỗ trợ";
             // 
             // nguontien
             // 
@@ -493,7 +548,9 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.table_all_Bank);
             this.Controls.Add(this.tableBank);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -528,6 +585,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.panelAddBank.ResumeLayout(false);
             this.panelAddBank.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.table_all_Bank)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -571,5 +629,9 @@
         private System.Windows.Forms.Button btn_add_bank_close;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtBankName;
+        private System.Windows.Forms.DataGridView table_all_Bank;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.Label label5;
     }
 }

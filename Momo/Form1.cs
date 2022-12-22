@@ -79,6 +79,7 @@ namespace Momo
             nguontien1.Dispose();
             nguontien1 = new nguontien();
             sidepanel.Height = btn_money.Height;
+            nguontien1.setusername = lbl_username.Text; // get username
             sidepanel.Top = btn_money.Top;
             nguontien1.Location = new Point(200, 22);
             nguontien1.Size = new Size(841, 559);

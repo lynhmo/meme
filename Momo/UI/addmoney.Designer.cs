@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button1 = new System.Windows.Forms.Button();
             this.tableBank = new System.Windows.Forms.DataGridView();
             this.id_bank = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,6 +39,7 @@
             this.naptienNumber = new System.Windows.Forms.NumericUpDown();
             this.cbb_bankname = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.txt_bankName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.tableBank)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.naptienNumber)).BeginInit();
             this.SuspendLayout();
@@ -72,14 +73,14 @@
             this.tableBank.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_bank,
             this.bankname});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(45)))), ((int)(((byte)(139)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tableBank.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(45)))), ((int)(((byte)(139)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tableBank.DefaultCellStyle = dataGridViewCellStyle2;
             this.tableBank.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(0)))), ((int)(((byte)(100)))));
             this.tableBank.Location = new System.Drawing.Point(39, 335);
             this.tableBank.Name = "tableBank";
@@ -131,12 +132,18 @@
             this.button2.TabIndex = 10;
             this.button2.Text = "Thêm tiền vào ví";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // naptienNumber
             // 
             this.naptienNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.naptienNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
             this.naptienNumber.Location = new System.Drawing.Point(39, 234);
+            this.naptienNumber.Maximum = new decimal(new int[] {
+            -1486618624,
+            232830643,
+            0,
+            0});
             this.naptienNumber.Name = "naptienNumber";
             this.naptienNumber.Size = new System.Drawing.Size(466, 28);
             this.naptienNumber.TabIndex = 11;
@@ -161,11 +168,19 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Chọn ngân hàng";
             // 
+            // txt_bankName
+            // 
+            this.txt_bankName.Location = new System.Drawing.Point(338, 192);
+            this.txt_bankName.Name = "txt_bankName";
+            this.txt_bankName.Size = new System.Drawing.Size(100, 20);
+            this.txt_bankName.TabIndex = 13;
+            // 
             // addmoney
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(231)))));
+            this.Controls.Add(this.txt_bankName);
             this.Controls.Add(this.cbb_bankname);
             this.Controls.Add(this.naptienNumber);
             this.Controls.Add(this.button2);
@@ -196,5 +211,6 @@
         private System.Windows.Forms.NumericUpDown naptienNumber;
         private System.Windows.Forms.ComboBox cbb_bankname;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txt_bankName;
     }
 }
