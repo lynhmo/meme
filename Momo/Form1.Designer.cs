@@ -393,7 +393,6 @@
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private register register1;
         private register register2;
         //private home home1;
     }

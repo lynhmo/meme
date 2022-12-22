@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLichSu = new System.Windows.Forms.DataGridView();
             this.id_lichsu = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,6 +38,7 @@
             this.ngaygiaodich = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_uudai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.thongdiep = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.tableLichSu)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,6 +58,9 @@
             this.tableLichSu.AllowUserToDeleteRows = false;
             this.tableLichSu.AllowUserToResizeRows = false;
             this.tableLichSu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tableLichSu.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(173)))), ((int)(((byte)(210)))));
+            this.tableLichSu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tableLichSu.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.tableLichSu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableLichSu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_lichsu,
@@ -65,11 +70,21 @@
             this.ngaygiaodich,
             this.id_uudai,
             this.thongdiep});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(45)))), ((int)(((byte)(139)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tableLichSu.DefaultCellStyle = dataGridViewCellStyle3;
+            this.tableLichSu.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(0)))), ((int)(((byte)(100)))));
             this.tableLichSu.Location = new System.Drawing.Point(29, 90);
             this.tableLichSu.Name = "tableLichSu";
             this.tableLichSu.RowHeadersVisible = false;
-            this.tableLichSu.Size = new System.Drawing.Size(779, 438);
+            this.tableLichSu.Size = new System.Drawing.Size(779, 372);
             this.tableLichSu.TabIndex = 2;
+            this.tableLichSu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tableLichSu_CellClick);
             // 
             // id_lichsu
             // 
@@ -113,11 +128,27 @@
             this.thongdiep.HeaderText = "Thông điệp";
             this.thongdiep.Name = "thongdiep";
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(3)))), ((int)(((byte)(57)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.button2.ForeColor = System.Drawing.SystemColors.Control;
+            this.button2.Location = new System.Drawing.Point(656, 482);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(152, 51);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Xem Chi Tiết";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // lichsu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(214)))), ((int)(((byte)(231)))));
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.tableLichSu);
             this.Controls.Add(this.label1);
             this.Name = "lichsu";
@@ -140,5 +171,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ngaygiaodich;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_uudai;
         private System.Windows.Forms.DataGridViewTextBoxColumn thongdiep;
+        private System.Windows.Forms.Button button2;
     }
 }

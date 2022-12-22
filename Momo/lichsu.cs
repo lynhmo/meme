@@ -46,5 +46,10 @@ namespace Momo
             tableLichSu.DataSource = dtbl;
             cnn.Close();
         }
+
+        private void tableLichSu_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            tableLichSu.CurrentRow.Selected = true;
+        }
     }
 }

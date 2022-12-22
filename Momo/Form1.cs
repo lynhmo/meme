@@ -76,6 +76,8 @@ namespace Momo
         private void button4_Click(object sender, EventArgs e)
         {
             //NGUON TIEN
+            nguontien1.Dispose();
+            nguontien1 = new nguontien();
             sidepanel.Height = btn_money.Height;
             sidepanel.Top = btn_money.Top;
             nguontien1.Location = new Point(200, 22);

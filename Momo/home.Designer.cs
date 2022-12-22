@@ -67,7 +67,7 @@
             this.lbl_money_nhan3 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.panel3232 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.lbl_name2 = new System.Windows.Forms.Label();
             this.lbl_money_nhan2 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -84,7 +84,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.panel3232.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -529,17 +529,17 @@
             this.label16.TabIndex = 4;
             this.label16.Text = "Nhận :";
             // 
-            // panel3232
+            // panel7
             // 
-            this.panel3232.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(192)))));
-            this.panel3232.Controls.Add(this.lbl_name2);
-            this.panel3232.Controls.Add(this.lbl_money_nhan2);
-            this.panel3232.Controls.Add(this.label19);
-            this.panel3232.Controls.Add(this.label20);
-            this.panel3232.Location = new System.Drawing.Point(233, 270);
-            this.panel3232.Name = "panel3232";
-            this.panel3232.Size = new System.Drawing.Size(203, 75);
-            this.panel3232.TabIndex = 12;
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(133)))), ((int)(((byte)(192)))));
+            this.panel7.Controls.Add(this.lbl_name2);
+            this.panel7.Controls.Add(this.lbl_money_nhan2);
+            this.panel7.Controls.Add(this.label19);
+            this.panel7.Controls.Add(this.label20);
+            this.panel7.Location = new System.Drawing.Point(233, 270);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(203, 75);
+            this.panel7.TabIndex = 12;
             // 
             // lbl_name2
             // 
@@ -650,7 +650,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel3232);
+            this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel1);
@@ -679,8 +679,8 @@
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            this.panel3232.ResumeLayout(false);
-            this.panel3232.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.ResumeLayout(false);
@@ -729,7 +729,7 @@
         private System.Windows.Forms.Label lbl_money_nhan3;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Panel panel3232;
+        private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label lbl_name2;
         private System.Windows.Forms.Label lbl_money_nhan2;
         private System.Windows.Forms.Label label19;
