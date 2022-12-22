@@ -108,6 +108,12 @@
     <Compile Include="register.Designer.cs">
       <DependentUpon>register.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\addmoney.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\addmoney.Designer.cs">
+      <DependentUpon>addmoney.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\chuyentien.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="register.resx">
       <DependentUpon>register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\addmoney.resx">
+      <DependentUpon>addmoney.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\chuyentien.resx">
       <DependentUpon>chuyentien.cs</DependentUpon>

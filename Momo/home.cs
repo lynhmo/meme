@@ -62,17 +62,17 @@ namespace Momo
                 MessageBox.Show(ex.Message);
             }
         }
-        private chuyentien addmoney1;
+        private chuyentien chuyentien1;
         private void button1_Click(object sender, EventArgs e)
         {
 
-            addmoney1 = new chuyentien();
-            addmoney1.chuyentien_username = username_get; // chuyen username sang chuyen tien
-            addmoney1.Location = new Point(0, 0);
-            addmoney1.Size = new Size(841, 559);
-            this.Controls.Add(addmoney1);
-            addmoney1.Visible = true;
-            addmoney1.BringToFront();
+            chuyentien1 = new chuyentien();
+            chuyentien1.chuyentien_username = username_get; // chuyen username sang chuyen tien
+            chuyentien1.Location = new Point(0, 0);
+            chuyentien1.Size = new Size(841, 559);
+            this.Controls.Add(chuyentien1);
+            chuyentien1.Visible = true;
+            chuyentien1.BringToFront();
         }
 
         private void home_Load(object sender, EventArgs e)
@@ -85,6 +85,8 @@ namespace Momo
             panel6.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel6.Width, panel6.Height, 20, 20));
             panel7.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel7.Width, panel7.Height, 20, 20));
             panel8.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, panel8.Width, panel8.Height, 20, 20));
+            button3.Visible = false;
+            button3_Click(sender, e);
         }
         private string money1 = "";
         private string id1 = "";
@@ -460,16 +462,16 @@ namespace Momo
             curent_money();
         }
 
-        private addmoney addmoney1;
+        private addmoney addbank;
         private void btn_naptien_Click(object sender, EventArgs e)
         {
-            addmoney1 = new chuyentien();
-            addmoney1.addmoney_username = username_get;
-            addmoney1.Location = new Point(0, 0);
-            addmoney1.Size = new Size(841, 559);
-            this.Controls.Add(addmoney1);
-            addmoney1.Visible = true;
-            addmoney1.BringToFront();
+            addbank = new addmoney();
+            addbank.addmoney_username = username_get;
+            addbank.Location = new Point(0, 0);
+            addbank.Size = new Size(841, 559);
+            this.Controls.Add(addbank);
+            addbank.Visible = true;
+            addbank.BringToFront();
         }
     }
 }
