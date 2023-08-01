@@ -53,6 +53,7 @@
     <Compile Include="dautu.Designer.cs">
       <DependentUpon>dautu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Entity\User.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -273,5 +274,6 @@
   <ItemGroup>
     <None Include="Resources\Logo-OceanBank-V.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

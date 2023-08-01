@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Momo.Entity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace Momo
 {
     public partial class Form1 : Form
     {
+        private User currUser = new User();
         private static string connectionString = "Data Source=(local); Initial Catalog = momo; Integrated Security=SSPI;";
         private static SqlConnection cnn = new SqlConnection(connectionString);
         public Form1()
@@ -36,7 +38,7 @@ namespace Momo
             //HOME
             home1.Dispose();
             home1 = new home();
-            home1.username_get = lbl_username.Text; // lay data username sang panel home
+            home1.username_get = currUser.Name; // lay data username sang panel home
             sidepanel.Height = btnHome.Height;
             home1.Location = new Point(200, 22);
             home1.Size = new Size(841, 559);
@@ -178,6 +180,10 @@ namespace Momo
                 int sl = (int)cmd.ExecuteScalar();
                 if (sl == 1)
                 {
+                    //new
+                    currUser.Name = name;
+                    currUser.Password = pass;
+                    //
                     lbl_username.Text = name;
                     txtPassword.Text = null;
                     txtUsername.Text = null;

@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using Momo.Entity;
 
 namespace Momo
 {
@@ -36,6 +37,7 @@ namespace Momo
         private static string connectionString = "Data Source=(local); Initial Catalog = momo; Integrated Security=SSPI;";
         private static SqlConnection cnn = new SqlConnection(connectionString);
         private int manguoidung;
+        private var Form1
         public string username_get { get; set; }
         private string cur_mon = "0";
         private void curent_money()
@@ -44,6 +46,7 @@ namespace Momo
             {
                 SqlCommand crruent_money = new SqlCommand("Select * from users WHERE username=@username1", cnn);
                 crruent_money.Parameters.AddWithValue("@username1", username_get);
+
                 //open conn
                 cnn.Open();
                 using (SqlDataReader reader = crruent_money.ExecuteReader())
