@@ -1,5 +1,6 @@
 ## Bài tập lớn Đồ Án .NET
-Phần mềm này dựa theo MOMO để tạo lên.  
-Phần mềm này code rất cẩu thả vì chỉ được làm trong 1 tuần và 1 mình.
-
-# PHẦN MỀM CHỈ MANG TÍNH HỌC TẬP
+Phần mềm này dựa theo MOMO để tạo lên.\
+Phần mềm có đăng ký, đăng nhập tài khoản.\
+Có chức năng chuyển tiền và nạp tiền vào ví.\
+Hiển thị lịch sử giao dịch.\
+__Phần mềm vẫn thiếu vài chức năng và vẫn chưa được tối ưu.__
